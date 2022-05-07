@@ -16,11 +16,11 @@ namespace SpecflowProjectFebuarybatch2022.PageObjects
             driver = _driver;
         }
 
-        //1. Properties
+
         private IWebElement elements(string nameAlias) =>
             driver.GetMyElement(By.XPath($"//div[@class='card mt-4 top-card'][.='{nameAlias}']")).single;
 
-        //2. Methods or functions
+
         public void NavigateToSite(string url) => driver.Navigate().GoToUrl(url);
         public void clickElements(string element) => elements(element).ClickViaJs(driver);
     }
