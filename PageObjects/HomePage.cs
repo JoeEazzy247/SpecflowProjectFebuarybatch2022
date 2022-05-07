@@ -17,12 +17,6 @@ namespace SpecflowProjectFebuarybatch2022.PageObjects
         }
 
         //1. Properties
-        //private IWebElement elements(string nameAlias) => driver.FindElement(
-        //        By.XPath($"//div[@class='card mt-4 top-card'][.='{nameAlias}']"));
-
-        //private IWebElement elements(string nameAlias) =>
-        //    driver.FindMyElement(locator.xpath, $"//div[@class='card mt-4 top-card'][.='{nameAlias}']");
-
         private IWebElement elements(string nameAlias) =>
             driver.GetMyElement(By.XPath($"//div[@class='card mt-4 top-card'][.='{nameAlias}']")).single;
 
