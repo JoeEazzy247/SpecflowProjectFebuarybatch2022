@@ -16,7 +16,6 @@ namespace SpecflowProjectFebuarybatch2022.PageObjects
             driver = _driver;
         }
 
-        //1. Properties
         private IWebElement headertxt =>
             driver.FindMyElement(locator.xpath,$"//div[@class='main-header']");
         private IWebElement fullName => 
@@ -29,15 +28,11 @@ namespace SpecflowProjectFebuarybatch2022.PageObjects
             driver.FindMyElement(locator.id, "permanentAddress");
 
 
-        //2. Method or function
         public string getTextBoxHeaderTxt() => headertxt.Text;
         public void EnterFullName(string value) => fullName.SendKeys(value);
         public void EnterEmail(string value)=> email.SendKeys(value);
         public void EnterCurrentAndParmanentAddress(string caddress, string paddress)
         {
-            //currentAddress.SendKeys(caddress);
-            //permanentAddress.SendKeys(paddress);
-
             currentAddress.Entertxt(caddress);
             permanentAddress.Entertxt(paddress);
         }
